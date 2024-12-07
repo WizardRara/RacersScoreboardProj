@@ -12,6 +12,6 @@ public class Main {
         RacingScoreboard racingScoreboard = new RacingScoreboard(new RacersListCalculator
                 (new StatisticReaderIMPL(new PropertiesLoader(new Properties()))));
         System.out.println(racingScoreboard.scoreboardOutput());
-
+        //ne sosay
     }
 }
