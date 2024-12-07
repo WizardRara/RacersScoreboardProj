@@ -1,13 +1,12 @@
-package org.example;
+package org.example.entity;
 
-import java.time.Duration;
 import java.util.Objects;
 
 public class Racer {
     private final String abbreviation;
     private final String name;
     private final String rota;
-    private Duration lapTime;
+    private String lapTime;
 
     public Racer(String abbreviation, String name, String rota) {
         this.abbreviation = abbreviation;
@@ -27,11 +26,11 @@ public class Racer {
         return rota;
     }
 
-    public Duration getLapTime() {
+    public String getLapTime() {
         return lapTime;
     }
 
-    public void setLapTime(Duration lapTime) {
+    public void setLapTime(String lapTime) {
         this.lapTime = lapTime;
     }
 
@@ -41,7 +40,7 @@ public class Racer {
         if (o == null || getClass() != o.getClass()) return false;
 
         Racer racer = (Racer) o;
-        return Objects.equals(abbreviation, racer.abbreviation) && Objects.equals(name, racer.name) && Objects.equals(rota, racer.rota) && Objects.equals(lapTime, racer.lapTime);
+        return Objects.equals(abbreviation, racer.abbreviation);
     }
 
     @Override
